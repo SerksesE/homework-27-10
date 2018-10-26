@@ -1,8 +1,11 @@
+//constructor class with an empty array
 class ShoppingCart {
   constructor() {
     this.items = []
 
   }
+
+  //
   getItems() {
     return this.items;
   }
@@ -26,7 +29,7 @@ class ShoppingCart {
 
 module.exports = ShoppingCart
 
-const cart = new ShoppingCart
+
 
 
 
