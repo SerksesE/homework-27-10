@@ -3,17 +3,17 @@ module.exports.groupAdultsByAgeRange = function (array) {
   const array1 = array
 
   //adds different age groups
-  array1.forEach((age => {
-    if (age.age <= 20) {
-      age.ageGroup = "20 and younger"
-    } else if (age.age > 20 && age.age <= 30) {
-      age.ageGroup = "21-30"
-    } else if (age.age > 30 && age.age <= 40) {
-      age.ageGroup = "31-40"
-    } else if (age.age > 40 && age.age <= 50) {
-      age.ageGroup = "41-50"
-    } else if (age.age > 50) {
-      age.ageGroup = "51 and older"
+  array1.forEach((person => {
+    if (person.age <= 20) {
+      person.ageGroup = "20 and younger"
+    } else if (person.age > 20 && person.age <= 30) {
+      person.ageGroup = "21-30"
+    } else if (person.age > 30 && person.age <= 40) {
+      person.ageGroup = "31-40"
+    } else if (person.age > 40 && person.age <= 50) {
+      person.ageGroup = "41-50"
+    } else if (person.age > 50) {
+      person.ageGroup = "51 and older"
     }
   }));
 
@@ -40,14 +40,13 @@ module.exports.groupAdultsByAgeRange = function (array) {
   //console.log(array2);
 
   //deletes the added age group property from the original array
-  array1.forEach((age) => { delete age.ageGroup });
+  array1.forEach((person) => { delete person.ageGroup });
 
   //check if array1 = array is back to the original state
   //console.log(array1);
 
   //returns array2 which has the right layout
   return array2;
-  
 };
 
 
